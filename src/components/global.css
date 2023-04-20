@@ -119,8 +119,6 @@ code {
   
   .btn:hover{
     transition : 361ms;
-    padding: 10px 29px;
-    transform : translateY(-0px);
     background-color: #fff;
     color: var(--primary);
     border: solid 2px var(--primary);

@@ -4,6 +4,8 @@ import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import Hero from '../components/hero'
+// import { renderRichText } from 'gatsby-source-contentful/rich-text'
+// import Container from '../components/container'
 // import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -19,6 +21,11 @@ class RootIndex extends React.Component {
           content={data.shortBio}
         />
         {/* <ArticlePreview posts={posts} /> */}
+        {/* <Container>
+          <h1 style={{ textAlign: 'center' }}>
+            {renderRichText(data.welcome)}
+          </h1>
+        </Container> */}
       </Layout>
     )
   }

@@ -15,7 +15,7 @@
 }
 
 .logoReservar{
-  display: none;
+  display: none !important;
 }
 
 .image {
@@ -84,10 +84,10 @@
 
 @media screen and (max-width: 600px) {
   .title{
-    display: none;
+    display: none !important;
   }
   .logoReservar{
-    display: block;
+    display: block !important;
   }
 
   .details{
