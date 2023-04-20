@@ -13,6 +13,8 @@ const Navigation = () => {
       <Link to="/" className={styles.logoLink}>
         <StaticImage
           className={styles.logo}
+          width={'100px'}
+          height={'50px'}
           alt="logo"
           src="../../static/images/logo.jpg"
         />
