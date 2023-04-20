@@ -41,7 +41,7 @@
     float: none;
   }
   .logo{
-    position: absolute;
+    position: absolute !important;
     left: var(--space-md);
     top: var(--space-md);
   }
