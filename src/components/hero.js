@@ -21,7 +21,16 @@ const Hero = ({ image, title, content }) => (
       {content && (
         <>
           <div className={styles.content}>{renderRichText(content)}</div>
-          <button className="btn">Reservar</button>
+          <div className={styles.divReservar}>
+            <StaticImage
+              className={styles.logoReservar}
+              alt="logo"
+              src="../../static/images/logo.jpg"
+              width={'100px'}
+              height={'50px'}
+            />
+            <button className="btn">Reservar</button>
+          </div>
         </>
       )}
     </div>

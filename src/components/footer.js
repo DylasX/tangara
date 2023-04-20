@@ -5,7 +5,7 @@ import * as styles from './footer.module.css'
 
 const Footer = () => (
   <Container as="footer">
-    <div className={styles.container}>Hecho por Dylas con ❤️</div>
+    <div className={styles.container}></div>
   </Container>
 )
 

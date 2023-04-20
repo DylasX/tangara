@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html * {
@@ -123,4 +124,62 @@ code {
     background-color: #fff;
     color: var(--primary);
     border: solid 2px var(--primary);
+  }
+
+  .wave {
+    background-image: url("/images/wave.svg");
+    background-repeat: repeat-x;
+    background-size: 1200px auto;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 200px;
+    animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    z-index: 1;
+  }
+    
+  .wave:nth-of-type(2) {
+    opacity: 0.7;
+    animation:  swell 10s ease -1.25s infinite, wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
+    z-index: 0;
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: -1200px;
+    }
+  }
+
+  @keyframes waveResponsive {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: -40vh;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      background-position: right bottom 10px;
+    }
+    50% {
+      background-position: right bottom 0;
+    }
+  } 
+
+  @media screen and (max-width: 660px) {
+    .wave{
+      background-size: 40vh auto;
+      height: 80vh;
+      animation: waveResponsive 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    }
+
+    .wave:nth-of-type(2) {
+      animation:  swell 10s ease -1.25s infinite, waveResponsive 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
+    }
   }

@@ -13,6 +13,10 @@ class Template extends React.Component {
       <>
         <Seo />
         <Navigation />
+        <div class="ocean">
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
         <main>{children}</main>
         <Footer />
       </>
